@@ -8,6 +8,9 @@
 //   anagrams('RAIL! SAFETY!', 'fairy tales') --> True
 //   anagrams('Hi there', 'Bye there') --> False
 
-function anagrams(stringA, stringB) {}
+// hint: this is the regex you need str.replace(/[^\w]/g, "").toLowerCase()
+// hint there are two ways to do this problem
+
+function cleanedAndSortedString(str) {}
 
 module.exports = anagrams;
