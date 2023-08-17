@@ -17,3 +17,8 @@
 function pyramid(n) {}
 
 module.exports = pyramid;
+
+//       column (5)
+// row   | | |x| | |
+// (3)   | |x|x|x| |
+//       |x|x|x|x|x|
