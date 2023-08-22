@@ -21,7 +21,7 @@ class Node {
   }
 
   remove(data) {
-    this.children = this.children.filter((child) => child.data !== data);
+    this.children = this.children.filter((node) => node.data !== data);
   }
 }
 
@@ -30,27 +30,29 @@ class Tree {
     this.root = null;
   }
 
+  // start with an array with the root node
+  // take the first el in the node and add its children to the END of the array
+  // call the iterator with that node and move on to the next node
   traverseBF(fn) {
-    let arr = [this.root];
+    let array = [this.root];
 
-    while(arr.length) {
-      console.log('arr', arr)
-      const node = arr.shift();
-      // add children to the END of the array
-      arr.push(...node.children)
-      fn(node)
+    while(array.length) {
+      const node = array.shift();
+      array = [...array, ...node.children];
+      fn(node);
     }
   }
 
+  // start with an array with the root node
+  // take the first el in the node and add its children to the START of the array
+  // call the iterator with that node and move on to the next node
   traverseDF(fn) {
-    let arr = [this.root];
+    let array = [this.root];
 
-    while(arr.length) {
-      console.log('arr', arr)
-      const node = arr.shift();
-      // add children to the START of the array
-      arr = [...node.children, ...arr]
-      fn(node)
+    while(array.length) {
+      const node = array.shift();
+      array = [...node.children, ...array];
+      fn(node);
     }
   }
 }
