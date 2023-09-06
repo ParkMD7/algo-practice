@@ -8,6 +8,7 @@
 // Example:
 //   fib(4) === 3
 
+// for the recursive solution touch on runtime complexity
 function fib(n) {}
 
 module.exports = fib;
