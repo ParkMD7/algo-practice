@@ -13,29 +13,6 @@
 //  lookNsee("31131211131221")
 //     "13211311123113112211"
 
-function lookNsee(str) {
-  let count = 0;
-  let previousChar = "";
-  let result = "";
-
-  console.log('str', str)
-  str.split("").forEach((char, idx) => {
-    if (!previousChar || previousChar === char) {
-      count++;
-      previousChar = char;
-    } else {
-      result += `${count}${previousChar}`;
-      previousChar = char;
-      count = 1;
-    }
-
-    // handle edge case for last char
-    if (idx === str.length - 1) {
-      result += `${count}${char}`;
-    }
-  })
-
-  return result;
-}
+function lookNsee(str) {}
 
 module.exports = lookNsee;
