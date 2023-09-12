@@ -8,12 +8,11 @@
 //   capitalize('look, it is working!') --> 'Look, It Is Working!'
 
 function capitalize(str) {
-  const capitalized = str
+  return str
+    .toLowerCase()
     .split(" ")
-    .map((word) => `${word[0].toUpperCase()}${word.slice(1)}`)
-    .join(" ")
-
-  return capitalized;
+    .map((word) => `${word.slice(0, 1).toUpperCase()}${word.slice(1)}`)
+    .join(" ");
 }
 
 module.exports = capitalize;
