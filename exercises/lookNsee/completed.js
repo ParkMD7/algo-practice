@@ -18,7 +18,6 @@ function lookNsee(str) {
   let previousChar = "";
   let result = "";
 
-  console.log('str', str)
   str.split("").forEach((char, idx) => {
     if (!previousChar || previousChar === char) {
       count++;
