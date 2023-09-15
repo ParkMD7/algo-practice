@@ -14,12 +14,19 @@
 //     [12, 13, 14, 5],
 //     [11, 16, 15, 6],
 //     [10,  9,  8, 7]]
-function matrix(n) {
-  let results = [];
+
+function createMatrixArray(n) {
+  let matrix = [];
 
   for (let i = 0; i < n; i++) {
-    results.push([]);
+    matrix.push([])
   }
+
+  return matrix;
+}
+
+function matrix(n) {
+  const matrix = createMatrixArray(n);
 
   let counter = 1;
   let startRow = 0;
@@ -32,7 +39,7 @@ function matrix(n) {
     // iterate through startRow and assign n values
     // then increment the startRow (aka move it down)
     for (let i = startColumn; i <= endColumn; i++) {
-      results[startRow][i] = counter;
+      matrix[startRow][i] = counter;
       counter++
     }
     startRow++ 
@@ -42,7 +49,7 @@ function matrix(n) {
     // then decrement the endColumn (aka move it left)
     for (let i = startRow; i <= endRow; i++) {
       console.log('i', i)
-      results[i][endColumn] = counter;
+      matrix[i][endColumn] = counter;
       counter++
     }
     endColumn--
@@ -51,7 +58,7 @@ function matrix(n) {
     // reverse iterate through endRow and assign n values
     // then decrement the endRow (aka move it up)
     for (let i = endColumn; i >= startColumn; i--) {
-      results[endRow][i] = counter;
+      matrix[endRow][i] = counter;
       counter++ 
     }
     endRow--
@@ -60,15 +67,13 @@ function matrix(n) {
     // reverse iterate through startColumn and assign n values
     // then increment the startColumn (aka move it right)
     for (let i = endRow; i >= startRow; i--) {
-      results[i][startColumn] = counter
+      matrix[i][startColumn] = counter
       counter++
     }
     startColumn++
-    console.log('results', results)
   }
 
-  // console.log('results', results)
-  return results;
+  return matrix;
 }
 
 module.exports = matrix;
