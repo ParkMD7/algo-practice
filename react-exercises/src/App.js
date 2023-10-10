@@ -6,14 +6,18 @@ import React from "react";
 
 // Table
 // import Problem from "./problems/Table/Problem";
-import Table from "./problems/Table/solution/Table";
+// import Table from "./problems/Table/solution/Table";
+
+// HolyGrail
+import Problem from "./problems/HolyGrail/Problem";
+import HolyGrail from "./problems/HolyGrail/solution/HolyGrail";
 
 import './App.css';
 
 const App = () => {
   return (
     <div className="App">
-      <Table />
+      <Problem />
     </div>
   );
 }

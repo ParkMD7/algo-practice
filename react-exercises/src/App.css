@@ -1,6 +1,5 @@
 .App {
   text-align: center;
-  padding: 20px;
 }
 
 /* basic css for Accordion component */
@@ -22,8 +21,4 @@
   pointer-events: none;
   transform: translateY(2px) rotate(135deg);
   width: 8px;
-}
-
-.accordion-icon--rotated {
-  
 }
