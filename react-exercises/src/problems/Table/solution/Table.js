@@ -50,51 +50,25 @@ const Table = () => {
   };
 
   const renderTable = () => {
-    const arr = Array.from({ length: rows }, (value, index) => index + 1).map(
-      (rowNumber) => {
-        return (
-          <tr key={rowNumber}>
-            {Array.from({ length: columns }, (value, index) => index + 1).map(
-              (columnNumber) => {
-                // const ttrue = rows * columnNumber + (rowNumber + 1);
-                console.log("columnNumber % 2 === 0", columnNumber % 2 === 0);
-                const value =
-                  columnNumber % 2 === 0
-                    ? rows * columnNumber + rowNumber
-                    : rows * columnNumber - rowNumber;
-                console.log("value", value);
-                // console.log('ttrue', ttrue)
-                // const ffalse = rows * (columnNumber + 1) - rowNumber;
-                // console.log('ffalse', ffalse)
-                return <td key={columnNumber}>{value}</td>;
-              }
-            )}
-          </tr>
-        );
-      }
-    );
-
-    console.log("arr", arr);
     return (
       <tbody>
-        {Array.from({ length: rows }, (r) => {
-          console.log("r", r);
-          return 0;
-        }).map((_, row) => {
-          console.log("_", _);
-          console.log("row", row);
-          return (
-            <tr key={row}>
-              {Array.from({ length: columns }, () => 0).map((_, col) => (
-                <td key={col}>
-                  {col % 2 === 0
-                    ? rows * col + (row + 1)
-                    : rows * (col + 1) - row}
-                </td>
-              ))}
-            </tr>
-          );
-        })}
+        {Array.from({ length: rows }, (value, index) => 0).map(
+          (v, rowNumber) => {
+            return (
+              <tr key={rowNumber}>
+                {Array.from({ length: columns }, (value, index) => 0).map(
+                  (v, columnNumber) => {
+                    const value =
+                      columnNumber % 2 === 0
+                        ? rows * columnNumber + (rowNumber + 1)
+                        : rows * (columnNumber + 1) - rowNumber;
+                    return <td key={columnNumber}>{value}</td>;
+                  }
+                )}
+              </tr>
+            );
+          }
+        )}
       </tbody>
     );
   };
