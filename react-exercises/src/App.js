@@ -9,8 +9,12 @@ import React from "react";
 // import Table from "./problems/Table/solution/Table";
 
 // HolyGrail
-import Problem from "./problems/HolyGrail/Problem";
-import HolyGrail from "./problems/HolyGrail/solution/HolyGrail";
+// import Problem from "./problems/HolyGrail/Problem";
+// import HolyGrail from "./problems/HolyGrail/solution/HolyGrail";
+
+// BreakingBad
+import Problem from "./problems/BreakingBad/Problem";
+import BreakingBad from "./problems/BreakingBad/solution/BreakingBad";
 
 import './App.css';
 
