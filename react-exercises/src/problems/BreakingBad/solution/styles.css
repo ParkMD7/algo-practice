@@ -24,3 +24,21 @@
 }
 
 /* Add Additional Styles Here */
+
+.breakingTextContainer {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.breakingText {
+  padding: 10px;
+  font-size: 100px;
+}
+
+.breaking {
+  background-color: green;
+  color: "white";
+}

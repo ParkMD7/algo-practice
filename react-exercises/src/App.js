@@ -13,7 +13,7 @@ import React from "react";
 // import HolyGrail from "./problems/HolyGrail/solution/HolyGrail";
 
 // BreakingBad
-import Problem from "./problems/BreakingBad/Problem";
+// import Problem from "./problems/BreakingBad/Problem";
 import BreakingBad from "./problems/BreakingBad/solution/BreakingBad";
 
 import './App.css';
@@ -21,7 +21,7 @@ import './App.css';
 const App = () => {
   return (
     <div className="App">
-      <Problem />
+      <BreakingBad />
     </div>
   );
 }
