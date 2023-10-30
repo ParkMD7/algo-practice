@@ -14,14 +14,18 @@ import React from "react";
 
 // BreakingBad
 // import Problem from "./problems/BreakingBad/Problem";
-import BreakingBad from "./problems/BreakingBad/solution/BreakingBad";
+// import BreakingBad from "./problems/BreakingBad/solution/BreakingBad";
+
+// Temperature Converter
+import Problem from "./problems/TemperatureConverter/Problem"
+import TemperatureConverter from "./problems/TemperatureConverter/solution/TemperatureConverter";
 
 import './App.css';
 
 const App = () => {
   return (
     <div className="App">
-      <BreakingBad />
+      <TemperatureConverter />
     </div>
   );
 }
