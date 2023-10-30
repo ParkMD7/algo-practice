@@ -17,7 +17,7 @@ import React from "react";
 // import BreakingBad from "./problems/BreakingBad/solution/BreakingBad";
 
 // Temperature Converter
-import Problem from "./problems/TemperatureConverter/Problem"
+// import Problem from "./problems/TemperatureConverter/Problem"
 import TemperatureConverter from "./problems/TemperatureConverter/solution/TemperatureConverter";
 
 import './App.css';
