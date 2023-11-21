@@ -9,5 +9,5 @@ test('Finds determines if a string is a pangram', () => {
 });
 
 test('Works with numbers in the string and capitalizations', () => {
-  expect(pangram('The Quick 1 broWn fox 2 jumps over 3 the laZy DOG')).toEqual(true);
+  expect(pangram('The Quick 1 broWn fox 2 jumps over 3 the laZY DOG')).toEqual(true);
 });

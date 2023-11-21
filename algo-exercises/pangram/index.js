@@ -7,6 +7,8 @@
 // pangram("abcccccccd") === false
 // pangram("The quick brown fox jumps over the lazy dog") === true
 
+// hint: this is the regex you need  str.replace(/[^a-zA-Z]+/g, '').toLowerCase()
+
 function pangram(str) {}
 
 module.exports = pangram;
