@@ -18,6 +18,10 @@ function pyramid(n) {}
 
 module.exports = pyramid;
 
+// pyramid(3) would print like this
+
+// midpoint = 3
+
 //       column (5)
 // row   | | |x| | |
 // (3)   | |x|x|x| |
