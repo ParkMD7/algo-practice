@@ -18,14 +18,18 @@ import React from "react";
 
 // Temperature Converter
 // import Problem from "./problems/TemperatureConverter/Problem"
-import TemperatureConverter from "./problems/TemperatureConverter/solution/TemperatureConverter";
+// import TemperatureConverter from "./problems/TemperatureConverter/solution/TemperatureConverter";
+
+// Temperature Converter
+import Problem from "./problems/ImageGallery/Problem"
+// import ImageGallery from "./problems/ImageGallery/solution/ImageGallery";
 
 import './App.css';
 
 const App = () => {
   return (
     <div className="App">
-      <TemperatureConverter />
+      <Problem />
     </div>
   );
 }
