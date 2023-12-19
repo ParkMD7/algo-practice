@@ -2,7 +2,8 @@ import React from "react";
 
 // Accordion
 // import Problem from "./problems/Accordion/Problem";
-// import Accordion from "./problems/Accordion/solution/Accordion";
+import { accordionItems } from "./problems/Accordion/solution/props"
+import Accordion from "./problems/Accordion/solution/Accordion";
 
 // Table
 // import Problem from "./problems/Table/Problem";
@@ -21,7 +22,7 @@ import React from "react";
 // import TemperatureConverter from "./problems/TemperatureConverter/solution/TemperatureConverter";
 
 // Temperature Converter
-import Problem from "./problems/ImageGallery/Problem"
+// import Problem from "./problems/ImageGallery/Problem"
 // import ImageGallery from "./problems/ImageGallery/solution/ImageGallery";
 
 import './App.css';
@@ -29,7 +30,7 @@ import './App.css';
 const App = () => {
   return (
     <div className="App">
-      <Problem />
+      <Accordion items={accordionItems} />
     </div>
   );
 }

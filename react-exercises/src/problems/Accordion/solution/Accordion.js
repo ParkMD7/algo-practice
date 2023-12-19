@@ -1,30 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
+import { GoChevronDown, GoChevronLeft } from "react-icons/go";
 
-import AccordionSection from "./AccordionSection";
+const Accordion = ({ items }) => {
+  const [expandedIdx, setExpandedIdx] = useState(0);
 
-const Accordion = () => {
+  const handleOnClick = (idx) => {
+    setExpandedIdx(idx === expandedIdx ? -1 : idx)
+  };
+
   return (
-    <>
-      <AccordionSection
-        title="HTML"
-        content="The HyperText Markup Language or HTML is the standard markup language
-        for documents designed to be displayed in a web browser."
-        // added per instructions for user experience -- always nice to have an expanded icon first
-        defaultExpanded
-      />
-      <AccordionSection
-        title="CSS"
-        content="Cascading Style Sheets is a style sheet language used for describing
-        the presentation of a document written in a markup language such as
-        HTML or XML."
-      />
-      <AccordionSection
-        title="JavaScript"
-        content="JavaScript, often abbreviated as JS, is a programming language that is
-        one of the core technologies of the World Wide Web, alongside HTML and
-        CSS."
-      />
-    </>
+    <div>
+      {items.map((item, idx) => {
+        const isExpanded = idx === expandedIdx;
+        return (
+          <div onClick={() => handleOnClick(idx)} key={item.title}>
+            <div style={{ display: "flex", flexFlow: "row", justifyContent: "center", alignItems: "center"}}>
+            {isExpanded ? <GoChevronDown /> : <GoChevronLeft />}
+            <h1 style={{ marginLeft: "10px" }}>{item.title}</h1>
+            </div>
+            {isExpanded && <p>{item.content}</p>}
+          </div>
+        )
+      })}
+    </div>
   );
 };
 

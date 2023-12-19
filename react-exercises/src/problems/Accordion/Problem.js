@@ -1,5 +1,8 @@
 import React from "react";
 
+// assume this component will receive the following props
+import { accordionItems } from "./solution/props";
+
 const Accordion = () => {
   return (
     <div>

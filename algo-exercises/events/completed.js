@@ -7,22 +7,23 @@ class Events {
   constructor() {
     this.events = {};
   }
+
   // Register an event handler
   on(eventName, callback) {
+    // console.log('eventName', eventName)
     if (this.events[eventName]) {
       this.events[eventName].push(callback)
     } else {
-      this.events[eventName] = [callback]
+      this.events[eventName] = [callback];
     }
+    // console.log('this.events[eventName]', this.events[eventName])
   }
 
   // Trigger all callbacks associated
   // with a given eventName
   trigger(eventName) {
     if (this.events[eventName]) {
-      for (let callback of this.events[eventName]) {
-        callback();
-      }
+      this.events[eventName].forEach((cb) => cb())
     }
   }
 
@@ -34,5 +35,28 @@ class Events {
     }
   }
 }
+
+const event = new Events();
+event.on("click", () => {
+  console.log("hello world")
+})
+
+event.trigger("click")
+
+event.on("click", () => {
+  console.log("hello world...AGAIN!")
+})
+
+event.trigger("click")
+
+event.on("focus", () => {
+  console.log("hellooooooooooo")
+})
+
+console.log('event before delete', event)
+
+event.off("click")
+
+console.log('event after delete', event)
 
 module.exports = Events;

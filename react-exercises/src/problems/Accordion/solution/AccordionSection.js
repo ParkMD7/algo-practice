@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+// Component to use if we want each individual accordion section to control its open status
+// versus having only 1 section available to be open at a time
 const AccordionSection = ({ title, content, defaultExpanded }) => {
   const [isExpanded, setIsExpanded] = useState(defaultExpanded || false);
 
