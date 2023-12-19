@@ -10,7 +10,7 @@ import React from "react";
 // Loading state?
 // Error state?
 
-// Here is the URL to fetch from https://jsonplaceholder.typicode.com/photos
+// Here is the URL to fetch from "https://jsonplaceholder.typicode.com/photos"
 
 const ImageGallery = () => {
   return (
