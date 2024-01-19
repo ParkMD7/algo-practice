@@ -18,8 +18,6 @@ const BreakingBad = () => {
     setBreakingLastName(breakify(lastName));
   }, [lastName]);
 
-  console.log("breakingFirstName", breakingFirstName);
-  console.log("breakingLastName", breakingLastName);
   return (
     <div className="breakingBadRoot">
       <div className="breakingTextContainer">
