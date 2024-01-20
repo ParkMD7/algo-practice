@@ -7,7 +7,7 @@ const BreakingText = ({ text }) => {
       <span className="breaking">{text[1]}</span>
       <span className="">{text[2]}</span>
     </div>
-  )
-}
+  );
+};
 
 export default BreakingText;

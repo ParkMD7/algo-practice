@@ -9,10 +9,10 @@ const TemperatureConverter = () => {
 
     if (name === "fahrenheit") {
       setFahrenheit(value);
-      setCelcius(parseFloat((5/9) * (value - 32)).toFixed(4));
+      setCelcius(parseFloat((5 / 9) * (value - 32)).toFixed(4));
     } else {
       setCelcius(value);
-      setFahrenheit(parseFloat((value * (9/5)) + 32).toFixed(4));
+      setFahrenheit(parseFloat(value * (9 / 5) + 32).toFixed(4));
     }
   };
 

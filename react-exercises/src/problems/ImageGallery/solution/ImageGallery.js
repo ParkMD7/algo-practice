@@ -17,12 +17,10 @@ const ImageGallery = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const fetchImages = async () => {
-    const images = await fetch(
-      "https://jsonplaceholder.typicode.com/photos"
-    )
+    const images = await fetch("https://jsonplaceholder.typicode.com/photos")
       .then((data) => data.json())
       .then((images) => {
-        console.log('images', images)
+        console.log("images", images);
         return images.data.children.map((image) => {
           const { title, preview } = image.data;
           const imageUrl = preview.images
@@ -73,7 +71,11 @@ const ImageGallery = () => {
     <div>
       <h1>Good Dogs</h1>
       <figure>
-        <img src={images[activeIndex].imageUrl} alt="a good boi" style={{ height: 500, width: 450 }} />
+        <img
+          src={images[activeIndex].imageUrl}
+          alt="a good boi"
+          style={{ height: 500, width: 450 }}
+        />
         <figcaption>{images[activeIndex].title}</figcaption>
       </figure>
       <div>

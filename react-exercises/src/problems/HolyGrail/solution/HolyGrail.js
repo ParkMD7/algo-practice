@@ -1,8 +1,8 @@
-import './styles.css';
+import "./styles.css";
 
 const HolyGrail = () => {
   return (
-    <div className='root'>
+    <div className="root">
       <header>Header</header>
       <div className="columns">
         <nav>Navigation</nav>
@@ -12,6 +12,6 @@ const HolyGrail = () => {
       <footer>Footer</footer>
     </div>
   );
-}
+};
 
 export default HolyGrail;

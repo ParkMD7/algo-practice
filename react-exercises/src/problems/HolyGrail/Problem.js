@@ -1,4 +1,4 @@
-import './styles.css';
+import "./styles.css";
 
 const HolyGrail = () => {
   return (
@@ -12,6 +12,6 @@ const HolyGrail = () => {
       <footer>Footer</footer>
     </>
   );
-}
+};
 
 export default HolyGrail;
