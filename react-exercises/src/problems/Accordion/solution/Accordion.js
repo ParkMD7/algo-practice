@@ -5,7 +5,7 @@ const Accordion = ({ items }) => {
   const [expandedIdx, setExpandedIdx] = useState(0);
 
   const handleOnClick = (idx) => {
-    setExpandedIdx(idx === expandedIdx ? -1 : idx)
+    setExpandedIdx(idx === expandedIdx ? -1 : idx);
   };
 
   return (
@@ -14,13 +14,20 @@ const Accordion = ({ items }) => {
         const isExpanded = idx === expandedIdx;
         return (
           <div onClick={() => handleOnClick(idx)} key={item.title}>
-            <div style={{ display: "flex", flexFlow: "row", justifyContent: "center", alignItems: "center"}}>
-            {isExpanded ? <GoChevronDown /> : <GoChevronLeft />}
-            <h1 style={{ marginLeft: "10px" }}>{item.title}</h1>
+            <div
+              style={{
+                display: "flex",
+                flexFlow: "row",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              {isExpanded ? <GoChevronDown /> : <GoChevronLeft />}
+              <h1 style={{ marginLeft: "10px" }}>{item.title}</h1>
             </div>
             {isExpanded && <p>{item.content}</p>}
           </div>
-        )
+        );
       })}
     </div>
   );

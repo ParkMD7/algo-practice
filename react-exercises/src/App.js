@@ -2,7 +2,7 @@ import React from "react";
 
 // Accordion
 // import Problem from "./problems/Accordion/Problem";
-import { accordionItems } from "./problems/Accordion/solution/props"
+import { accordionItems } from "./problems/Accordion/solution/props";
 import Accordion from "./problems/Accordion/solution/Accordion";
 
 // Table
@@ -25,7 +25,7 @@ import Accordion from "./problems/Accordion/solution/Accordion";
 // import Problem from "./problems/ImageGallery/Problem"
 // import ImageGallery from "./problems/ImageGallery/solution/ImageGallery";
 
-import './App.css';
+import "./App.css";
 
 const App = () => {
   return (
@@ -33,6 +33,6 @@ const App = () => {
       <Accordion items={accordionItems} />
     </div>
   );
-}
+};
 
 export default App;
