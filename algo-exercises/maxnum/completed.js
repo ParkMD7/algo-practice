@@ -18,7 +18,7 @@ function maxNum(nums) {
 
     if (numMap[num] > mostCommonNumCount) {
       mostCommonNum = num;
-      mostCommonNumCount = numMap[num]
+      mostCommonNumCount = numMap[num];
     }
   }
 
