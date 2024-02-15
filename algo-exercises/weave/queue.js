@@ -9,8 +9,8 @@ class Queue {
     this.data = [];
   }
 
-  add(record) {
-    this.data.unshift(record);
+  add(el) {
+    this.data.unshift(el);
   }
 
   remove() {

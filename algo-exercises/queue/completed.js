@@ -13,10 +13,12 @@ class Queue {
     this.data = [];
   }
 
+  // method to add something to the end of the queue
   add(el) {
     this.data.unshift(el)
   }
 
+  // method to remove the first element of the queue + return it
   remove() {
     return this.data.pop();
   }

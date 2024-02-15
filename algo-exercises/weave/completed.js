@@ -9,8 +9,8 @@ class Queue {
     this.data = [];
   }
 
-  add(record) {
-    this.data.unshift(record);
+  add(el) {
+    this.data.unshift(el);
   }
 
   remove() {
@@ -26,13 +26,12 @@ module.exports = Queue;
 
 
 
-
 // --- Directions
 // 1) Complete the task in weave/queue.js
 // 2) Implement the 'weave' function.  Weave
 // receives two queues as arguments and combines the
 // contents of each into a new, third queue.
-// The third queue should contain the *alterating* content
+// The third queue should contain the *alternating* content
 // of the two queues.  The function should handle
 // queues of different lengths without inserting
 // 'undefined' into the new one.
@@ -54,15 +53,15 @@ module.exports = Queue;
 const Queue = require('./queue');
 
 function weave(sourceOne, sourceTwo) {
-  const newQueue = new Queue();
+  const newQueue = new Queue;
 
   while (sourceOne.peek() || sourceTwo.peek()) {
     if (sourceOne.peek()) {
-      newQueue.add(sourceOne.remove());
+      newQueue.add(sourceOne.remove())
     }
 
     if (sourceTwo.peek()) {
-      newQueue.add(sourceTwo.remove());
+      newQueue.add(sourceTwo.remove())
     }
   }
 
