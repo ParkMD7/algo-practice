@@ -30,7 +30,6 @@ class Queue {
     }
 
     const record = this.secondStack.pop();
-    console.log('record to remove', record);
 
     while(this.secondStack.peek()) {
       this.firstStack.push(this.secondStack.pop())
