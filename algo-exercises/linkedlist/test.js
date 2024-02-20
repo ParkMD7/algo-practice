@@ -97,7 +97,7 @@ describe('RemoveFirst', () => {
   });
 });
 
-describe('RemoveLast', () => {
+describe.skip('RemoveLast', () => {
   test('RemoveLast removes the last node when list is empty', () => {
     const l = new List();
     expect(() => {
@@ -135,7 +135,7 @@ describe('RemoveLast', () => {
   });
 });
 
-describe('InsertLast', () => {
+describe.skip('InsertLast', () => {
   test('adds to the end of the list', () => {
     const l = new List();
     l.insertFirst('a');
@@ -147,7 +147,7 @@ describe('InsertLast', () => {
   });
 });
 
-describe('GetAt', () => {
+describe.skip('GetAt', () => {
   test('returns the node at given index', () => {
     const l = new List();
     expect(l.getAt(10)).toEqual(null);
@@ -164,7 +164,7 @@ describe('GetAt', () => {
   });
 });
 
-describe('RemoveAt', () => {
+describe.skip('RemoveAt', () => {
   test('removeAt doesnt crash on an empty list', () => {
     const l = new List();
     expect(() => {
@@ -217,7 +217,7 @@ describe('RemoveAt', () => {
   });
 });
 
-describe('InsertAt', () => {
+describe.skip('InsertAt', () => {
   test('inserts a new node with data at the 0 index when the list is empty', () => {
     const l = new List();
     l.insertAt('hi', 0);

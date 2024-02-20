@@ -2,6 +2,11 @@
 // Implement classes Node and Linked Lists
 // See 'directions' document
 
+// how to run this:
+// open directions.html with live server
+// add "skip" to all describe blocks to start so that test failures aren't overwhelming
+// start tests with "jest linkedlist/test.js  --watch"
+
 class Node {
   constructor(data, next = null) {
     this.data = data;
@@ -15,40 +20,41 @@ class LinkedList {
   }
 
   insertFirst(data) {
-    this.head = new Node(data, this.head);
+    // pass in this.head as a second arg of this.head so we dont overwrite a new head node
+    // we want to insert and not overwrite
+    const newHeadNode = new Node(data, this.head);
+    this.head = newHeadNode;
   }
 
   size() {
-    let count = 0;
+    let counter = 0;
     let node = this.head;
 
+
     while (node) {
-      count++;
+      counter++;
       node = node.next;
     }
 
-    return count;
+    return counter;
   }
 
   getFirst() {
-    // return this.head;
-
-    // code reuse
-    return this.getAt(0);
+    return this.head;
   }
 
   getLast() {
-    // let node = this.head;
+    let node = this.head;
 
-    // while (node && node.next) {
-    //   node = node.next;
-    // }
-
-    // return node;
+    if (!node) return null
 
 
-    // code reuse
-    return this.getAt(this.size() - 1);
+    while (node) {
+      if (!node.next) {
+        return node;
+      }
+      node = node.next;
+    }
   }
 
   clear() {
@@ -56,110 +62,12 @@ class LinkedList {
   }
 
   removeFirst() {
-    let node = this.head;
+    const node = this.head;
 
-    if (node) {
-      this.head = node.next;
-    }
-  }
-
-  removeLast() {
-    // if no current head
-    if (!this.head) {
-      return;
-    }
-
-    // if head length of 1
-    if (!this.head || !this.head.next) {
+    if (!node.next) {
       this.head = null;
-      return;
-    }
-
-    let previousNode = this.head;
-    let currentNode = this.head.next;
-
-    while (currentNode.next) {
-      previousNode = currentNode;
-      currentNode = previousNode.next;
-    }
-
-    previousNode.next = null;
-  }
-
-  insertLast(data) {
-    // get the last element
-    const last = this.getLast();
-
-    if (!last) {
-      this.head = new Node(data);
-      return;
-    }
-
-    last.next = new Node(data);
-  }
-
-  getAt(index) {
-    let node = this.head;
-    let counter = 0;
-
-    while (node) {
-      if (counter === index) {
-        return node;
-      }
-
-      counter++;
-      node = node.next;
-    }
-
-    // check for edge case when exited while loop because couldnt find index
-    return null;
-  }
-
-  removeAt(index) {
-    // check for edge case where we have no nodes
-    if (!this.head) return;
-
-    // check for edge case where we have only 1 node
-    if (index === 0) {
-      this.head = this.head.next;
-      return;
-    }
-
-    const previousNode = this.getAt(index - 1);
-    const currentNode = this.getAt(index);
-
-    // check for edge case where index provided may be outside bounds
-    // set previous nodes next to the current codes next
-    if (previousNode && currentNode) {
-      previousNode.next = currentNode.next
-    }
-  }
-
-  insertAt(data, index) {
-    // handle edge case with empty list
-    if (!this.head) {
-      this.head = new Node(data);
-      return;
-    }
-
-    // handle edge case where index is 0 and we have items in the list
-    if (index === 0) {
-      this.head = new Node(data, this.head)
-      return;
-    }
-
-    let previousNode = this.getAt(index - 1);
-    let currentNode = this.getAt(index)
-
-    // handle edge case where its out of bounds
-    if (!currentNode) {
-      this.insertLast(data);
-      return;
-    }
-
-    if (previousNode && currentNode) {
-      const newNode = new Node(data, currentNode)
-      previousNode.next = newNode;
+    } else {
+      this.head = node.next;
     }
   }
 }
