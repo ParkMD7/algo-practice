@@ -16,9 +16,6 @@ function circular(list) {
   let slowIterator = list.getFirst();
   let fastIterator = list.getFirst();
 
-  console.log('slowIterator', slowIterator)
-  console.log('fastIterator', fastIterator)
-
   while (fastIterator.next && fastIterator.next.next) {
     slowIterator = slowIterator.next;
     fastIterator = fastIterator.next.next;
