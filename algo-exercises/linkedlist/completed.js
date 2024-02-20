@@ -69,7 +69,7 @@ class LinkedList {
       return;
     }
 
-    // if head length of 1
+    // if node list length of 1
     if (!this.head || !this.head.next) {
       this.head = null;
       return;
