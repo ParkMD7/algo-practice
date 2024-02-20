@@ -13,28 +13,22 @@
 
 function fromLast(list, n) {
   // declare two iterators
-  let first = list.getFirst();
-  let firstPlusN = list.getFirst();
-  let counter = 0;
+  let startNode = list.getFirst();
+  let startNodePlusN = list.getFirst();
 
   // move one iterator up N spaces through the list
-  while (counter < n && firstPlusN.next) {
-    counter++
-    firstPlusN = firstPlusN.next;
+  for (let i = 0; i < n; i++) {
+    startNodePlusN = startNodePlusN.next;
   }
 
   // loop through the list until it ends
-  while (firstPlusN.next) {
-    first = first.next
-    firstPlusN = firstPlusN.next;
+  while (startNodePlusN.next) {
+    startNode = startNode.next;
+    startNodePlusN = startNodePlusN.next;
   }
 
-  console.log('counter', counter)
-  console.log('first', first)
-  console.log('firstPlusN', firstPlusN)
-
   // return the node
-  return first;
+  return startNode;
 }
 
 module.exports = fromLast;
