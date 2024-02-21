@@ -32,10 +32,6 @@ function levelWidth(root) {
       counterArray[counterArray.length - 1] += 1;
       childArray = [...childArray, ...child.children];
     }
-
-    console.log("child", child);
-    console.log("childArray", childArray);
-    console.log("counterArray", counterArray);
   }
 
   return counterArray;

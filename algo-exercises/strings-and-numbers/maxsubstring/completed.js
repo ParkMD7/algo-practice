@@ -14,12 +14,10 @@ function maxSubstring(str) {
     // check if the current char is equal to the previous char
     if (char !== previousChar) {
       currentSubstring += char;
+      previousChar = char;
     } else {
       currentSubstring = char;
     }
-
-    // set previous char
-    previousChar = char;
 
     // check for longest substring
     if (currentSubstring.length > longestSubstring.length) {
