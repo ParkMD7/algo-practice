@@ -5,7 +5,8 @@
 // how to run this:
 // open directions.html with live server
 // add "skip" to all describe blocks to start so that test failures aren't overwhelming
-// start tests with "jest linkedlist/test.js  --watch"
+
+// start tests with "jest linked-lists/linkedlist/test.js  --watch"
 
 class Node {}
 
