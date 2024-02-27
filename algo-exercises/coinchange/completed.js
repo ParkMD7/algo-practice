@@ -12,14 +12,18 @@
 // coinChange([2], 3) === -1
 // coinChange([1], 0) === 0
 
-// to run tests from the algo-exercises directory: `jest coinchange/test.js --watch`
+// Time complexity: O(n * m), where n is the length of the coins array and m is the amount
+// We iterate through both arrays.
+
+// Space complexity: O(n).
+// We use a constant amount of extra space for storing variables regardless of the input size.
 
 function coinChange(coinArray, amount) {
   // create an array for the total amount + 1 (start from zero) && fill it with an invalid value
-  let coinsPerAmountArr = Array(amount + 1).fill(Infinity);
+  let coinsPerAmount = Array(amount + 1).fill(Infinity);
 
   // create a base case
-  coinsPerAmountArr[0] = 0;
+  coinsPerAmount[0] = 0;
 
   // start a loop from 1 to amount to iterate over all values in the range
   for (let currentAmount = 1; currentAmount <= amount; currentAmount++) {
@@ -28,17 +32,17 @@ function coinChange(coinArray, amount) {
     for (let coin of coinArray) {
       // check if I can make a valid amount
       if (currentAmount - coin >= 0) {
-        // set the currentAmount in the coinsPerAmountArr to the lesser of:
+        // set the currentAmount in the coinsPerAmount to the lesser of:
         // current value ~OR~ 1 plus difference between currentAmount - coin
-        coinsPerAmountArr[currentAmount] = Math.min(
-          coinsPerAmountArr[currentAmount],
-          1 + coinsPerAmountArr[currentAmount - coin]
+        coinsPerAmount[currentAmount] = Math.min(
+          coinsPerAmount[currentAmount],
+          1 + coinsPerAmount[currentAmount - coin]
         )
       }
     }
   }
 
-  return coinsPerAmountArr[amount] > amount ? -1 : coinsPerAmountArr[amount];
+  return coinsPerAmount[amount] > amount ? -1 : coinsPerAmount[amount];
 }
 
 module.exports = coinChange;

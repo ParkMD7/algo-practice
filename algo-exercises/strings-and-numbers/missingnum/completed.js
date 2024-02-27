@@ -6,9 +6,11 @@
 // missingNumber([9,6,4,2,3,5,7,0,1]) === 8
 
 
-// Time complexity: O(n), where n is the length of the input array. We iterate through the array once to calculate the sum of the array elements.
+// Time complexity: O(n), where n is the length of the input array. 
+// We iterate through the array once to calculate the sum of the array elements.
 
-// Space complexity: O(1). We use a constant amount of extra space for storing variables regardless of the input size.
+// Space complexity: O(1).
+// We use a constant amount of extra space for storing variables regardless of the input size.
 
 function missingNumber(numArray) {
   let missingNum;

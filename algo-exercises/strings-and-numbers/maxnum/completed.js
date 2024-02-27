@@ -3,10 +3,10 @@
 
 // --- Examples
 // maxNum([1, 1, 2]) === 1
-// maxNum([1, 2, 3, 4, 5, 6, 7, 7, 7, 8]) === "1"
+// maxNum([1, 2, 3, 4, 5, 6, 7, 7, 7, 8]) === 7
 
-// Time complexity: O(n)O(n)O(n)
-// Space complexity: O(n)O(n)O(n)
+// Time complexity: O(n)
+// Space complexity: O(n)
 
 function maxNum(nums) {
   let numMap = {};
