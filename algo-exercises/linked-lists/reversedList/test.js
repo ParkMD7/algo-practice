@@ -10,7 +10,7 @@ test('reversedList is a function', () => {
     const l = new LinkedList();
     l.insertLast(1);
     l.insertLast(2);
-    expect(reversedList(l).data).toEqual([2, 1]);
+    expect(reversedList(l)).toEqual([2, 1]);
   });
 
   test('when the list has 5 elements', () => {
@@ -20,10 +20,10 @@ test('reversedList is a function', () => {
     l.insertLast(3);
     l.insertLast(4);
     l.insertLast(5);
-    expect(reversedList(l).data).toEqual([5, 4, 3, 2, 1]);
+    expect(reversedList(l)).toEqual([5, 4, 3, 2, 1]);
   });
 
   test('when the list has 0 elements', () => {
     const l = new LinkedList();
-    expect(reversedList(l).data).toEqual([]);
+    expect(reversedList(l)).toEqual([]);
   });

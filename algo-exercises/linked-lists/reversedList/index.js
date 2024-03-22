@@ -9,7 +9,6 @@
  * }
  */
 
-
 // --- Example
 //   const l = new LinkedList();
 //   l.insertLast(1)
@@ -19,6 +18,21 @@
 //   l.insertLast(5)
 //   reversedList(l); // returns [5, 4, 3, 2, 1]
 
-function reversedList(list) {}
+const L = require('./linkedlist');
+const LinkedList = L.LinkedList;
+
+function reversedList(list) {
+  const revList = new LinkedList();
+  
+  console.log('revList before loop', revList)
+  for (let el of list) {
+    console.log('el', el)
+    revList.insertAt(el, 0);
+  }
+
+  console.log('revList after loop', revList)
+
+  return revList;
+}
 
 module.exports = reversedList;
