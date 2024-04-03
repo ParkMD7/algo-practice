@@ -1,5 +1,8 @@
+// TODO: update & fix these tests
+
 const reversedList = require('./index');
 const L = require('./linkedlist');
+const Node = L.Node;
 const LinkedList = L.LinkedList;
 
 test('reversedList is a function', () => {
@@ -10,6 +13,15 @@ test('reversedList is a function', () => {
     const l = new LinkedList();
     l.insertLast(1);
     l.insertLast(2);
+
+    const a = new Node('a');
+    const b = new Node('b');
+    const c = new Node('c');
+  
+    l.head = a;
+    a.next = b;
+    b.next = c;
+    c.next = b;
     expect(reversedList(l)).toEqual([2, 1]);
   });
 
