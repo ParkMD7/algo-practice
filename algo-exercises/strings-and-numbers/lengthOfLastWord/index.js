@@ -15,18 +15,6 @@
  * @return {number}
  */
 
-function lengthOfLastWord(str) {
-  let lastWord = "";
-
-  for (let word of str.split(" ")) {
-    if (!!word.length) {
-      lastWord = word;
-    }
-  }
-
-  console.log('lastWord', lastWord)
-
-  return lastWord.length;
-}
+function lengthOfLastWord(str) {}
 
 module.exports = lengthOfLastWord;
