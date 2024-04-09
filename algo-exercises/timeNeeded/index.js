@@ -32,24 +32,6 @@
  * @return {number}
  */
 
-function timeNeeded(tickets, k) {
-  let seconds = 0;
-  let line = [...tickets];
-
-  while (line[k] > 0) {
-    for (let ticketsNeeded = 0; ticketsNeeded < line.length; ticketsNeeded++) {
-      if (line[k] == 0) {
-        return seconds;
-      }
-
-      if (line[ticketsNeeded] > 0) {
-        seconds++;
-        line[ticketsNeeded] = line[ticketsNeeded] - 1;
-      }
-    }
-  }
-
-  return seconds;
-}
+function timeNeeded(tickets, k) {}
 
 module.exports = timeNeeded;
