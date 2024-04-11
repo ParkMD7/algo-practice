@@ -15,6 +15,12 @@
  * @return {string}
  */
 
-function firstPalindrome(words) {}
+const checkIsPalindrome = (word) => {
+  return word === word.split("").reverse().join("");
+}
+
+function firstPalindrome(words) {
+  return words.find((word) => checkIsPalindrome(word)) || "";
+}
 
 module.exports = firstPalindrome;
