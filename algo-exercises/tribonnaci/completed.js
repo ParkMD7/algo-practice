@@ -10,6 +10,18 @@
  * @return {number}
  */
 
-function tribonacci(n) {}
+function tribonacci(n) {
+  let fibArray = [0, 1, 1];
+
+  for (let i = fibArray.length - 1; i < n; i++) {
+    const previousNumber = fibArray[i - 1];
+    const previousPreviousNumber = fibArray[i - 2];
+
+    const fibNumber = previousNumber + previousPreviousNumber + fibArray[i];
+    fibArray.push(fibNumber);
+  }
+
+  return fibArray[n];
+}
 
 module.exports = tribonacci;
